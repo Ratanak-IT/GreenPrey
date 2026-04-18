@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ព័ត៌មាន | បៃតងកម្ពុជា</title>
+    <link rel="stylesheet" href="../output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Moul&display=swap" rel="stylesheet">
+    <script src="../js/theme.js"></script>
+</head>
+<body class="animate-fade-in">
+    <nav class="sticky top-0 z-50 bg-white dark:bg-green-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between h-20 items-center">
+                <a href="../index.html" class="flex items-center space-x-2">
+                    <div class="p-2 rounded-xl">
+                        <img src="../img/logo.png" alt="logo" class="w-12 h-12">
+                    </div>
+                    <span class="text-xl font-display text-nature-800 dark:text-white">បៃតងកម្ពុជា</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-8 text-sm font-medium items-center">
+                    <a href="../index.html"
+                        class="text-nature-800 dark:text-gray-200 text-[18px] hover:text-nature-600 dark:hover:text-white transition-colors">ទំព័រដើម</a>
+                    <a href="./about.html"
+                        class="text-nature-800 dark:text-gray-200 text-[18px] hover:text-nature-600 dark:hover:text-white transition-colors">អំពីយើង</a>
+                    <a href="./forest-protection.html"
+                        class="text-nature-800 dark:text-gray-200 text-[18px] hover:text-nature-600 dark:hover:text-white transition-colors">ការការពារព្រៃឈើ</a>
+                    <a href="./tree-planting.html"
+                        class="text-nature-800 dark:text-gray-200 text-[18px] hover:text-nature-600 dark:hover:text-white transition-colors">ការដាំដើមឈើ</a>
+                    <a href="./news.html"
+                        class="text-nature-600 dark:text-gray-200 text-[18px] font-bold">ព័ត៌មាន</a>
+                    <a href="./contact.html"
+                        class="text-nature-800 dark:text-gray-200 text-[18px] hover:text-nature-600 dark:hover:text-white transition-colors">ទាក់ទង</a>
+
+                    <button id="theme-toggle"
+                        class="p-2 bg-nature-100 dark:bg-nature-800 rounded-full text-nature-600 dark:text-nature-300 hover:scale-110 transition-transform">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464a1 1 0 101.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Right Side -->
+                <div class="lg:hidden flex items-center space-x-4">
+                    <button id="mobile-theme-toggle"
+                        class="p-2 bg-nature-100 dark:bg-nature-800 rounded-full text-nature-600 dark:text-nature-300">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                    </button>
+                    <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false"
+                        aria-label="Open navigation menu" class="p-2 text-nature-800 dark:text-white">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu-backdrop"
+            class="hidden fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300"></div>
+        <div id="mobile-menu"
+            class="fixed top-0 left-0 z-50 h-full w-80 max-w-[90vw] bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out border-r border-white/20 dark:border-slate-700/20">
+            <div class="flex flex-col h-full p-8">
+                <div class="flex justify-between items-center mb-12">
+                    <div class="flex items-center space-x-3">
+                        <img src="../img/logo.png" alt="logo" class="w-10 h-10">
+                        <span class="text-lg font-display text-nature-800 dark:text-white">បៃតងកម្ពុជា</span>
+                    </div>
+                    <button id="close-menu" aria-label="Close navigation menu"
+                        class="p-2 text-nature-600 dark:text-gray-300 hover:bg-nature-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="flex flex-col space-y-4">
+                    <a href="../index.html"
+                        class="text-lg font-medium text-nature-700 dark:text-nature-300 hover:text-nature-900 dark:hover:text-white transition-colors py-3 px-4 rounded-lg hover:bg-nature-50 dark:hover:bg-slate-800">ទំព័រដើម</a>
+                    <a href="./about.html"
+                        class="text-lg font-medium text-nature-700 dark:text-gray-200 hover:text-nature-900 dark:hover:text-white transition-colors py-3 px-4 rounded-lg hover:bg-nature-50 dark:hover:bg-slate-800">អំពីយើង</a>
+                    <a href="./education.html"
+                        class="text-lg font-medium text-nature-700 dark:text-gray-200 hover:text-nature-900 dark:hover:text-white transition-colors py-3 px-4 rounded-lg hover:bg-nature-50 dark:hover:bg-slate-800">ការអប់រំ</a>
+                    <a href="./forest-protection.html"
+                        class="text-lg font-medium text-nature-700 dark:text-gray-200 hover:text-nature-900 dark:hover:text-white transition-colors py-3 px-4 rounded-lg hover:bg-nature-50 dark:hover:bg-slate-800">ការការពារព្រៃឈើ</a>
+                    <a href="./tree-planting.html"
+                        class="text-lg font-medium text-nature-700 dark:text-gray-200 hover:text-nature-900 dark:hover:text-white transition-colors py-3 px-4 rounded-lg hover:bg-nature-50 dark:hover:bg-slate-800">ការដាំដើមឈើ</a>
+                    <a href="./news.html"
+                        class="text-lg font-medium text-nature-700 dark:text-gray-200 hover:text-nature-900 dark:hover:text-white transition-colors py-3 px-4 rounded-lg hover:bg-nature-50 dark:hover:bg-slate-800">ព័ត៌មាន</a>
+                    <a href="./contact.html"
+                        class="text-lg font-medium text-nature-700 dark:text-gray-200 hover:text-nature-900 dark:hover:text-white transition-colors py-3 px-4 rounded-lg hover:bg-nature-50 dark:hover:bg-slate-800">ទាក់ទង</a>
+                </nav>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center overflow-hidden">
+
+        <!-- VIDEO -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover scale-105">
+            <source src="../video/damderm2.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+        <div class="absolute inset-0 bg-nature-950/40 dark:bg-black/60"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-white w-full">
+
+            <div class="max-w-3xl animate-slide-up text-left flex flex-col items-start">
+
+                <span
+                    class="inline-block px-4 py-2 bg-nature-600 rounded-full text-xs font-bold mb-6 uppercase tracking-widest">
+                    ការដាំដុះ
+                </span>
+
+                <h1 class="text-5xl md:text-7xl font-display leading-normal mb-6">
+                    <span class="text-nature-400">ព័ត៌មាន</span> និង <span class="text-nature-400">ព្រឹត្តិការណ៍</span>
+                </h1>
+
+                <p class="text-xl md:text-3xl text-nature-100 font-light leading-relaxed mb-12 max-w-2xl">
+                  តាមដានសកម្មភាព និងព័ត៌មានចុងក្រោយបំផុតអំពីបរិស្ថាននៅក្នុងប្រទេសកម្ពុជា។
+                </p>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <a href="./detail.html" class="group block animate-slide-up">
+                <div class="relative h-96 rounded-[3rem] overflow-hidden mb-8 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="News">
+                    <div class="absolute top-8 left-8 px-6 py-2 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-nature-600 shadow-sm">យុទ្ធនាការ</div>
+                </div>
+                <div class="space-y-4">
+                    <span class="text-sm font-bold text-nature-400 uppercase tracking-widest">១៥ មេសា ២០២៦</span>
+                    <h2 class="text-3xl font-display text-nature-900 group-hover:text-nature-600 transition-colors leading-tight">ជោគជ័យនៃយុទ្ធនាការដាំដើមឈើ ១ម៉ឺនដើមនៅខេត្តពោធិ៍សាត់</h2>
+                    <p class="text-nature-600 line-clamp-2 text-lg leading-relaxed">សកម្មភាពនេះគឺជាផ្នែកមួយនៃកិច្ចខិតខំប្រឹងប្រែងរបស់បៃតងកម្ពុជា ក្នុងការលើកកម្ពស់ការយល់ដឹង និងការចូលរួមការពារធនធានធម្មជាតិ។</p>
+                    <span class="inline-flex items-center space-x-2 text-nature-600 font-bold">អានបន្ត <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                </div>
+            </a>
+
+        
+            <a href="#" class="group block animate-slide-up" style="animation-delay: 0.1s;">
+                <div class="relative h-96 rounded-[3rem] overflow-hidden mb-8 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="News">
+                    <div class="absolute top-8 left-8 px-6 py-2 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-nature-600 shadow-sm">ការអភិរក្ស</div>
+                </div>
+                <div class="space-y-4">
+                    <span class="text-sm font-bold text-nature-400 uppercase tracking-widest">១០ មេសា ២០២៦</span>
+                    <h2 class="text-3xl font-display text-nature-900 group-hover:text-nature-600 transition-colors leading-tight">ការរកឃើញសត្វកម្រក្នុងតំបន់ការពារជួរភ្នំក្រវាញ</h2>
+                    <p class="text-nature-600 line-clamp-2 text-lg leading-relaxed">ក្រុមការងារល្បាតរបស់យើងបានប្រទះឃើញដានជើងសត្វខ្លាពពក ដែលជាសញ្ញាល្អបញ្ជាក់ពីសុខភាពនៃប្រព័ន្ធអេកូឡូស៊ី។</p>
+                    <span class="inline-flex items-center space-x-2 text-nature-600 font-bold">អានបន្ត <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="py-24 bg-nature-900 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
+            <h2 class="text-4xl font-display">ទទួលបានព័ត៌មានថ្មីៗ</h2>
+            <p class="text-nature-300 text-lg">ចុះឈ្មោះដើម្បីទទួលបានព្រឹត្តិបត្រព័ត៌មានប្រចាំខែអំពីសកម្មភាពបរិស្ថានរបស់យើង។</p>
+            <form class="flex flex-col md:flex-row gap-4">
+                <input type="email" placeholder="អាសយដ្ឋានអ៊ីមែលរបស់អ្នក" class="flex-1 px-8 py-5 bg-white/10 border border-white/20 rounded-2xl focus:outline-none focus:border-nature-400 text-white">
+                <button class="px-10 py-5 bg-nature-600 hover:bg-nature-700 rounded-2xl font-bold transition-all">ចុះឈ្មោះ</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-nature-900 text-white py-16 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-nature-400 text-sm">© 2026 បៃតងកម្ពុជា។ រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+        </div>
+    </footer>
+</body>
+</html>
